@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Doctor Lookup</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Hello World</h1>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Doctor Lookup</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="inputForm">
+        <div class="form-group">
+          <label for="userQuery">Search by Medical Issue or Doctor Name:</label>
+          <input id="userQuery" class="form-control" type="text" placeholder="e.g. 'tootache' or 'Smith'">
+        </div>
+         <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div id="results">
+      </div>
   </div>
-</body>
-</html>
+  </body>
+  </html>

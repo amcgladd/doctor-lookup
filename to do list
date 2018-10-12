@@ -1,0 +1,19 @@
+html:
+//user interface that takes medical issue and search jQuery
+consider condensing name and issue into one generic query input
+
+front end logic:
+//assign input to variables
+pass variables to a constructor
+
+back end:
+create constructor using es6 syntax
+calls api with inputted variables
+
+
+
+for reference:
+portland long and lat: 45.529513, -122.652389
+
+request URL:
+https://api.betterdoctor.com/2016-03-01/doctors?query=arm&location=45.529513%2C%20-122.652389&user_location=45.529513%2C%20-122.652389&skip=0&limit=10&user_key=f84f67b80cb97f0ca52234d88090ee70
