@@ -11,19 +11,31 @@ function parseResults(data){
     console.log(doctor.profile.first_name,doctor.profile.last_name);
     //create a div with doctor information
     let doctorDiv =
-    `<div><h1>` +doctor.profile.first_name+ ` ` +doctor.profile.last_name + `</h1></div>`;
+    `<div>` +
+    `<h1>` +
+    doctor.profile.first_name + ` ` + doctor.profile.last_name + `</h1>`+
+    `<p>` +
+    doctor.practices[0].visit_address.street + `</p>`+
+    `<p>` +
+    doctor.practices[0].visit_address.city + ` ` + doctor.practices[0].visit_address.state + ` ` + doctor.practices[0].visit_address.zip + `</p>`+
+    `<p>Phone: ` +
+    doctor.practices[0].phones[0].number + `</p>`+
+    // `<a href=>` +
+    // doctor.practices[0].website + `</a>`+
+    `<p>Accepting New Patients? ` +
+    doctor.practices[0].accepts_new_patients + `</p>`+
+    `</div>`;
     //push div to finalOuput
     finalOutput.push(doctorDiv);
   });
   return finalOutput;
 }
 
-// first name,
-// last name,
-// address,
-// phone number,
-// website
-// whether or not the doctor is accepting new patients
+//testing if the obect has pproperties
+// console.log(arr.some(item => item.name === 'Blofeld'));
+// console.log(arr.some(item => item.name === 'Blofeld2'));
+
+
 
 $(document).ready(function() {
   $("#inputForm").submit(function(event) {
@@ -35,22 +47,16 @@ $(document).ready(function() {
     promise.then(function(response) {
       let body = JSON.parse(response);
       let results = body.data;
+      console.log(results);
+      if (results === undefined || results.length == 0) {
+          $('#results').text("Sorry, we have no results for that search term");
+      } else {
       let finalHTML = parseResults(results);
       $('#results').html(finalHTML);
-
+    }
 
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
     });
   });
 });
-
-
-//calls API based on request
-
-//parse response to extract
-//first name, last name, address, phone number, website and whether or not the doctor is accepting new patients (the API provides this data)
-
-//handle errors (any message not a 200 OK)
-
-//handle null results with "no doctors meet the criteria"
