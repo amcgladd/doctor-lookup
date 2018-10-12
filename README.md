@@ -21,6 +21,11 @@ Add description here
 * `npm run lint` to explicitly run ESLint
 * `npm run test` to run the unit tests with Karma and Jasmine. Visit `localhost:9876` to view the tests.
 
+## API Key instructions
+* You will need your own API key for the BetterDoctor API.
+* You can request an API key at https://developer.betterdoctor.com
+* Once you have your key, you can place it in the appropriate portion of the API call
+
 ## Technologies Used
 
 * JavaScript
