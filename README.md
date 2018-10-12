@@ -6,7 +6,6 @@
 
 ## Description
 
-Add description here
 
 ## Specs
 
