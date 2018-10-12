@@ -1,14 +1,25 @@
 html:
 //user interface that takes medical issue and search jQuery
-consider condensing name and issue into one generic query input
+//consider condensing name and issue into one generic query input
 
 front end logic:
 //assign input to variables
-pass variables to a constructor
+//pass variables to a constructor
+
+  parse body for each doctor:
+    first name,
+    last name,
+    address,
+    phone number,
+    website
+    whether or not the doctor is accepting new patients
+
+
+
 
 back end:
-create constructor using es6 syntax
-calls api with inputted variables
+//create constructor using es6 syntax
+//calls api with inputted variables
 
 
 
