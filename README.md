@@ -6,9 +6,7 @@
 
 ## Description
 
-
-## Specs
-
+This website allows users to enter search query and receive information about local doctors matching their request. The site will notify users if no matches are found.
 
 ## Setup on OSX
 
@@ -23,7 +21,7 @@
 ## API Key instructions
 * You will need your own API key for the BetterDoctor API.
 * You can request an API key at https://developer.betterdoctor.com
-* Once you have your key, you can place it in the appropriate portion of the API call
+* Once you have your key, you can the portion of the api url currently listed as "${process.env.exports.apiKey}" with your own API key (removing the $ and curly brackets)
 
 ## Technologies Used
 
@@ -36,10 +34,6 @@
 * ESLint
 * Jasmine
 * Karma
-
-## Links
-
-* Add links here
 
 ## License
 
